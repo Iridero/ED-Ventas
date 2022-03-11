@@ -44,7 +44,14 @@ namespace ED_Ventas
 
         private void VentaActual_DetalleAgregado(Detalle detalle)
         {
-            MessageBox.Show(detalle.ToString());
+            //MessageBox.Show(detalle.ToString());
+            ActualizarGrid();
+            txtTotalVenta.Text = ventaActual.Total.ToString();
+        }
+        private void ActualizarGrid()
+        {
+            dtgArticulos.DataSource = null;
+            dtgArticulos.DataSource = ventaActual.Detalles;
         }
     }
 }

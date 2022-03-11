@@ -38,6 +38,8 @@
             this.nmrCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtgArticulos = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTotalVenta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nmrPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgArticulos)).BeginInit();
@@ -130,11 +132,31 @@
             this.dtgArticulos.Size = new System.Drawing.Size(757, 188);
             this.dtgArticulos.TabIndex = 9;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(389, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Total de la venta";
+            // 
+            // txtTotalVenta
+            // 
+            this.txtTotalVenta.Location = new System.Drawing.Point(514, 6);
+            this.txtTotalVenta.Name = "txtTotalVenta";
+            this.txtTotalVenta.ReadOnly = true;
+            this.txtTotalVenta.Size = new System.Drawing.Size(255, 27);
+            this.txtTotalVenta.TabIndex = 11;
+            this.txtTotalVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtTotalVenta);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dtgArticulos);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.nmrCantidad);
@@ -168,5 +190,7 @@
         private NumericUpDown nmrCantidad;
         private Button btnAgregar;
         private DataGridView dtgArticulos;
+        private Label label5;
+        private TextBox txtTotalVenta;
     }
 }
