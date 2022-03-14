@@ -38,8 +38,13 @@
             this.nmrCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtgArticulos = new System.Windows.Forms.DataGridView();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalVenta = new System.Windows.Forms.TextBox();
+            this.btnTerminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgArticulos)).BeginInit();
@@ -125,12 +130,49 @@
             // dtgArticulos
             // 
             this.dtgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.descripcion,
+            this.cantidad,
+            this.precio,
+            this.monto});
             this.dtgArticulos.Location = new System.Drawing.Point(12, 116);
             this.dtgArticulos.Name = "dtgArticulos";
             this.dtgArticulos.RowHeadersWidth = 51;
             this.dtgArticulos.RowTemplate.Height = 29;
             this.dtgArticulos.Size = new System.Drawing.Size(757, 188);
             this.dtgArticulos.TabIndex = 9;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "Descripción";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.MinimumWidth = 6;
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Width = 300;
+            // 
+            // cantidad
+            // 
+            this.cantidad.DataPropertyName = "Cantidad";
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.MinimumWidth = 6;
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Width = 125;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "Precio";
+            this.precio.HeaderText = "Precio";
+            this.precio.MinimumWidth = 6;
+            this.precio.Name = "precio";
+            this.precio.Width = 125;
+            // 
+            // monto
+            // 
+            this.monto.DataPropertyName = "Monto";
+            this.monto.HeaderText = "Monto";
+            this.monto.MinimumWidth = 6;
+            this.monto.Name = "monto";
+            this.monto.Width = 125;
             // 
             // label5
             // 
@@ -150,11 +192,22 @@
             this.txtTotalVenta.TabIndex = 11;
             this.txtTotalVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnTerminar
+            // 
+            this.btnTerminar.Location = new System.Drawing.Point(624, 321);
+            this.btnTerminar.Name = "btnTerminar";
+            this.btnTerminar.Size = new System.Drawing.Size(145, 29);
+            this.btnTerminar.TabIndex = 12;
+            this.btnTerminar.Text = "Finalizar venta";
+            this.btnTerminar.UseVisualStyleBackColor = true;
+            this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 362);
+            this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.txtTotalVenta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtgArticulos);
@@ -192,5 +245,10 @@
         private DataGridView dtgArticulos;
         private Label label5;
         private TextBox txtTotalVenta;
+        private DataGridViewTextBoxColumn descripcion;
+        private DataGridViewTextBoxColumn cantidad;
+        private DataGridViewTextBoxColumn precio;
+        private DataGridViewTextBoxColumn monto;
+        private Button btnTerminar;
     }
 }

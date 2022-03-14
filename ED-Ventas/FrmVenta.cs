@@ -12,6 +12,7 @@ namespace ED_Ventas
 {
     public partial class FrmVenta : Form
     {
+        public event AlActualizarVenta VentaRealizada;
         public FrmVenta()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace ED_Ventas
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-
+            dtgArticulos.AutoGenerateColumns = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -52,6 +53,12 @@ namespace ED_Ventas
         {
             dtgArticulos.DataSource = null;
             dtgArticulos.DataSource = ventaActual.Detalles;
+        }
+
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+            VentaRealizada?.Invoke(this.ventaActual);
+            Close();
         }
     }
 }
