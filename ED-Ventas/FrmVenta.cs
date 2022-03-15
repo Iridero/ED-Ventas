@@ -57,6 +57,7 @@ namespace ED_Ventas
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
+            ventaActual.Fecha = dtpFechaVenta.Value;
             VentaRealizada?.Invoke(this.ventaActual);
             Close();
         }

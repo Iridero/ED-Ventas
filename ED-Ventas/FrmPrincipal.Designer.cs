@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgVentas = new System.Windows.Forms.DataGridView();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVentas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgVentas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 380);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVentas.Location = new System.Drawing.Point(12, 12);
+            this.dtgVentas.Name = "dtgVentas";
+            this.dtgVentas.RowHeadersWidth = 51;
+            this.dtgVentas.RowTemplate.Height = 29;
+            this.dtgVentas.Size = new System.Drawing.Size(776, 380);
+            this.dtgVentas.TabIndex = 0;
             // 
             // btnNuevaVenta
             // 
@@ -59,17 +59,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnNuevaVenta);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgVentas);
             this.Name = "FrmPrincipal";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dtgVentas;
         private Button btnNuevaVenta;
     }
 }
